@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina com Bootstrap</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+    rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+</head>
+<body>
+    <h1 class="p-3">Formulário</h1>
+
+        <!--Form-->
+        <form class="col-6 p-3">
+            <div class="mb-2">  
+                <label class="form-label" for="">Nome:</label>
+                <input class="form-control" id="nomeUsuario" type="text" placeholder="Informe o seu nome">
+            </div> 
+             <div class="mb-2">
+                <label class="form-label" for="">Senha:</label>
+                <input class="form-control" id="senhaUsuario" type="password"  placeholder="Informe a senha">
+            </div>
+            <div class="mb-4">
+                <label class="form-label" for="">Nascimento:</label>
+                <input class="form-control" id="dataNascimento" type="date">
+            </div>  
+                     <button type="submit">Cadastrar</button>
+         </form>
+
+            <!--Tabela-->
+        <table class="table table-striped table-hover col-4">
+            <thead class="table-dark">
+                <tr>
+                    <td>ID</td>
+                    <td>Nome</td>
+                    <td>Email</td>
+                    <td>Ações</td>
+                </tr>
+            </thead>
+        <tbody>
+                <tr>
+                    <td>O1</td>
+                    <td>João</td>
+                    <td>Joao@mail.com</td>
+                    <td><button class="btn btn-danger"><i class="bi bi-trash-fill"></i> Excluir</button></td>
+                </tr>
+                           <tr>
+                    <td>O2</td>
+                    <td>Ana</td>
+                    <td>Ana@mail.com</td>
+                    <td><button class="btn btn-danger"><i class="bi bi-trash-fill"></i> Excluir</button></td>
+                </tr>
+            </tbody>
+        </table> 
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>

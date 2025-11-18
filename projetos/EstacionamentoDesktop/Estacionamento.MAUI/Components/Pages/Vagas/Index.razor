@@ -1,0 +1,52 @@
+@page "/vagas"
+@inject HttpClient Http
+@inject NavigationManager Navigation
+@using Estacionamento.MAUI.Models
+
+<h3 class="text-center mb-3">Lista de Vagas</h3>
+
+<a href="/vagas/create" class="btn btn-primary mb-3">Nova Vaga</a>
+
+@if (vagas== null)
+{
+    <p><em>Carregando...</em></p>
+}
+else if (!vagas.Any())
+{
+    <p><em>Nenhuma vaga encontrada.</em></p>
+}
+else
+{
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Localização</th>
+                <th>Tipo</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var vaga in vagas)
+            {
+                <tr>
+                    <td>@vaga.Localizacao</td>
+                    <td>@vaga.TipoVaga</td>
+                    <td>
+                        <a href="vagas/edit/@vaga.Id" class="btn btn-sm btn-warning">Editar</a>
+                        <a href="vagas/details/@vaga.Id" class="btn btn-sm btn-info">Detalhes</a>
+                        <a href="vagas/delete/@vaga.Id" class="btn btn-sm btn-danger">Excluir</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    List<Vaga> vagas;
+    protected override async Task OnInitializedAsync()
+    {
+         vagas = await Http.GetFromJsonAsync<List<Vaga>>("https://localhost:4000/api/Vagas");
+    }
+    
+}
