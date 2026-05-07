@@ -1,1 +1,1 @@
-# UC6
+# Unidade Curricular 6
