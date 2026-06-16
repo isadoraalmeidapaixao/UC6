@@ -1,10 +1,5 @@
-#UC6: Desenvolver interface de usuário e usabilidade de aplicação desktop
-Guia rápido de Git e GitHub para iniciantes
-Tutorial Microsoft Textual de API
-Outro Tutorial Microsoft Textual de API
-Microsoft Lean Iterativo Web API
-Recomendação de Curso da Udemy - Pago
-Unity Learn - Tutorial Básico
+UC6: Desenvolver interface de usuário e usabilidade de aplicação desktop
+
 CARGA HORÁRIA: 96 HORAS
 
 Indicadores
